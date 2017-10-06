@@ -1,6 +1,6 @@
 # Fall 2017 TRGN510 Midterm
 
-This is the first R Markdown for the midterm assignment.  It is provided as 3 different markdowns to insure that one question does not prevent anyone from completing other parts of the exam.  You may not consult other students.  You are expected to use the internet.  You should double check your work.  If you post my github that is unedited and fail to turn yours in, I will kindly alert but deduct 10 points for not double checking.
+This is the overarching markdown for the midterm assignment that is shown within github. The R markdowns are provided in each of three directories.  This is done to insure that one question does not prevent anyone from completing other parts of the exam.  You may not consult other students.  You are expected to use the internet.  You should double check your work.  If you post my github that is unedited and fail to turn yours in, I will kindly alert but deduct 10 points for not double checking.
 
 Please clone this repository and work on it within your own workstation.  Within each directory is an index.Rmd that you can complete by editing the file.  When you have completed please create a new repository in your github entitled  Midterm2017.  
 
