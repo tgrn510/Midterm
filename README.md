@@ -4,7 +4,7 @@ This is the first R Markdown for the midterm assignment.  It is provided as 3 di
 
 Please clone this repository and work on it within your own workstation.  Within each directory is an index.Rmd that you can complete by editing the file.  When you have completed please create a new repository in your github entitled  Midterm2017.  
 
-Due Thursday October 12 by 2PM, unless alternative arrangements have been made.  
+Due Thursday October 12 by 1PM, unless alternative arrangements have been made.  
 
 * 10 Points.  Please put a license file containing an recognized license (MIT, etc) within your directory, and create a github repository with your name on it.  Share it with tgrn510 (github user).  
 * 10 Points.  Please login to the server at itg.usc.edu and clone your repostory within ~/www/shiny-server. Going to itg.usc.edu:3838/[yourname]/Midterm2017/Part_1_Concepts should take me to the completed Part 1 of your exam, itg.usc.edu:3838/[yourname]/Midterm2017/Part_2_BASH should take me to the second part, etc.
