@@ -1,0 +1,138 @@
+---
+title: "Bash"
+author: "David W. Craig"
+date: "10/4/2017"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is the second R Markdown for the midterm assignment. In this you will create a codeblock accomplishing the requested goal that both shows the code and executes the code.  There is no single correct approach.  It is very important that you are learning how to solve problems, and so it is completely acceptable to use commands you find to answer that question that were described explicitly.   
+
+The total for this section is 18 points.
+
+## Example:
+
+How would I list the files in my home directory, ordered by size such that the lowest size are at the bottom, and print the size of the files in a human readable format listing on the last 10 lines?
+
+```{bash}
+ls -lSh ~ | tail
+```
+
+### Question 1:  What is your current path?
+
+>Replace me with a bash code block answering the question
+
+### Question 2:  What is the date?
+
+>Replace me with a code block answering the question
+
+### Question 3:  Please make a new directory under the directory you are in called "mydirectory"
+
+>Replace me with a bash code block answering the question
+
+### Question 4:  What are the last 5 commands you have in your history
+
+>Replace me with a bash code block answering the question
+
+### Question 5:  Please put the following data into a file called "numbers.txt" using bash in R in a code block, where each number is on its own line using echo and the appropriate optional tag.
+
+*1234
+*12121
+*3434
+*123
+*12341239879
+
+Above - the markdown asterisk is just to show you that its on its own line. Please don't put the astrisk in the file.
+
+> Replace me with a bash code block creating a file "numbers.txt" where the above numbers are in it - each on its own line
+
+### Question 6:  Please cat the file numbers.txt you just created
+
+> Replace me with a bash code block answering the question
+
+### Question 7:  How many characters and how many lines are in the file?
+
+> Replace me with a bash code block answering the question
+
+### Question 8: Please create a sed command (e.g. sed 's/match/replace/g' numbers.txt) to commify the list of numbers in thousands place to the screen.  For example: 1,234 or 12,121
+
+> Replace me with a bash code block answering the question
+
+### Question 9:  Please make the 'numbers.txt' file private such that only you can read and write it.  Nobody at the group level can read it, write or execute it.
+
+> Replace me with a bash code block answering the question
+
+### Question 10:   Please make that file 'numbers.txt' such that you can read and write to it, and everyone else on the computer both world and group can just read it.
+
+> Replace me with a bash code block answering the question
+
+### Question 11:  Please scrape or download the information behind the gene PTEN into a file from this web-page:
+https://ghr.nlm.nih.gov/gene/PTEN
+
+> Replace me with a bash code block answering the question
+
+### Question 12:  Please echo your PATH - the directory where executable programs go such that you don't have to write the full path to run them.  
+
+> Replace me with a bash code block answering the question
+
+### Question 13:  Please add ~/bin to your existing path
+
+> Replace me with a bash code block answering the question
+
+### Question 14:  Please find files ending in md in your current directory
+
+> Replace me with a bash code block answering the question
+
+### Question 15:  Please put all in the previous commands in your history into a file and call that file "history.txt"
+
+> Replace me with a bash code block answering the question
+
+### Question 16:  Please print the first 5 lines of your history by piping history into head
+
+> Replace me with a bash code block answering the question
+
+### Question 17:  How would I specify to send me a reminder email every 8 minutes using a crontab?
+
+> Replace me with a crontab
+
+### Question 18: What is the first line of a BASH script?
+
+> Replace me with a good answer
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- The text below is just to reformat the page, using css styling -->
+```{r results="asis", echo = FALSE}
+cat("
+<style>
+h1 {
+    background-color: #990000;
+    color:#FFF;
+    text-align:center;
+}
+h2 {
+   background-color:#f3d6d6;
+   text-align:center;
+   color:#333
+}
+h3 {
+   margin-left:-5px;
+   color:#333
+}
+
+</style>
+")
+```
