@@ -15,12 +15,12 @@ Due Thursday October 12 by 2PM, unless alternative arrangements have been made.
 
 # Contents
 
-+* readme.md *
-* Part_1_Concepts
-    +*index.Rmd*
-* Part_2_BASH
-    +*index.Rmd*
-* Part_3_WebApp*
-    +*index.Rmd*
++* readme.md *  This file
+* Part_1_Concepts   Directory
+    +*index.Rmd*    Assignment
+* Part_2_BASH      Directory
+    +*index.Rmd*   Assignment
+* Part_3_WebApp*    Directory
+    +*index.Rmd*   Assignment
 
 
