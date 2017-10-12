@@ -72,28 +72,23 @@ cat numbers.txt
 
 ### Question 7:  How many characters and how many lines are in the file?
 
-
 wc -c numbers.txt
 wc -l numbers.txt
 
 
 ### Question 8: Please create a sed command (e.g. sed 's/match/replace/g' numbers.txt) to commify the list of numbers in thousands place to the screen.  For example: 1,234 or 12,121
 
-```{bash}
 sed -e :a -e 's/\(.*[0-9]\)\([0-9]\{3\}\)/\1,\2/;ta' numbers.txt
-```
+
 
 ### Question 9:  Please make the 'numbers.txt' file private such that only you can read and write it.  Nobody at the group level can read it, write or execute it.
 
-```{bash}
 chmod u=rw numbers.txt
-```
+
 
 ### Question 10:   Please make that file 'numbers.txt' such that you can read and write to it, and everyone else on the computer both world and group can just read it.
 
-```{bash}
 chmod u=rw, o=r, g=r numbers.txt 
-```
 
 ### Question 11:  Please scrape or download the information behind the gene PTEN into a file from this web-page:
 https://ghr.nlm.nih.gov/gene/PTEN
@@ -144,18 +139,6 @@ history | head -5
 ### Question 18: What is the first line of a BASH script?
 
 #!/bin/bash
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- The text below is just to reformat the page, using css styling -->
