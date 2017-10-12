@@ -1,7 +1,7 @@
 ---
 title: "Bash"
-author: "David W. Craig"
-date: "10/4/2017"
+author: "Marilena Melas"
+date: "10/10/2017"
 output: html_document
 runtime: shiny
 ---
@@ -24,19 +24,27 @@ ls -lSh ~ | tail
 
 ### Question 1:  What is your current path?
 
->Replace me with a bash code block answering the question
+```{bash}
+pwd
+```
+
 
 ### Question 2:  What is the date?
 
->Replace me with a code block answering the question
+```{bash}
+date
+```
 
 ### Question 3:  Please make a new directory under the directory you are in called "mydirectory"
 
->Replace me with a bash code block answering the question
+```{bash}
+mkdir mydirectory
+```
 
 ### Question 4:  What are the last 5 commands you have in your history
-
->Replace me with a bash code block answering the question
+```{bash}
+history | tail -5
+```
 
 ### Question 5:  Please put the following data into a file called "numbers.txt" using bash in R in a code block, where each number is on its own line using echo and the appropriate optional tag.
 
@@ -48,60 +56,97 @@ ls -lSh ~ | tail
 
 Above - the markdown asterisk is just to show you that its on its own line. Please don't put the astrisk in the file.
 
-> Replace me with a bash code block creating a file "numbers.txt" where the above numbers are in it - each on its own line
+```{bash}
+$ cat > numbers.txt 
+echo "1234" >> numbers.txt 
+echo "12121" >> numbers.txt
+echo "3434" >> numbers.txt
+echo "123" >> numbers.txt
+echo "12341239879" >> numbers.txt
+```
 
 ### Question 6:  Please cat the file numbers.txt you just created
 
-> Replace me with a bash code block answering the question
+```{bash}
+cat numbers.txt
+```
 
 ### Question 7:  How many characters and how many lines are in the file?
 
-> Replace me with a bash code block answering the question
+```{bash}
+wc -c numbers.txt
+wc -l numbers.txt
+```
 
 ### Question 8: Please create a sed command (e.g. sed 's/match/replace/g' numbers.txt) to commify the list of numbers in thousands place to the screen.  For example: 1,234 or 12,121
 
-> Replace me with a bash code block answering the question
+```{bash}
+sed -e :a -e 's/\(.*[0-9]\)\([0-9]\{3\}\)/\1,\2/;ta' numbers.txt
+```
 
 ### Question 9:  Please make the 'numbers.txt' file private such that only you can read and write it.  Nobody at the group level can read it, write or execute it.
 
-> Replace me with a bash code block answering the question
+```{bash}
+chmod u=rw numbers.txt
+```
 
 ### Question 10:   Please make that file 'numbers.txt' such that you can read and write to it, and everyone else on the computer both world and group can just read it.
 
-> Replace me with a bash code block answering the question
+```{bash}
+chmod u=rw, o=r, g=r numbers.txt 
+```
 
 ### Question 11:  Please scrape or download the information behind the gene PTEN into a file from this web-page:
 https://ghr.nlm.nih.gov/gene/PTEN
 
-> Replace me with a bash code block answering the question
+Fist, we install wget with $ brew install wget
+```{bash}
+wget https://ghr.nlm.nih.gov/gene/PTEN 
+```
 
 ### Question 12:  Please echo your PATH - the directory where executable programs go such that you don't have to write the full path to run them.  
 
-> Replace me with a bash code block answering the question
+```{bash}
+echo $PATH
+```
 
 ### Question 13:  Please add ~/bin to your existing path
+```{bash}
+PATH=$PATH:~/opt/bin       
+```
+or
 
-> Replace me with a bash code block answering the question
+```{bash}
+PATH=~/opt/bin:$PATH       
+```
 
 ### Question 14:  Please find files ending in md in your current directory
 
-> Replace me with a bash code block answering the question
+```{bash}
+find . -type f -name \*.md      
+```
 
 ### Question 15:  Please put all in the previous commands in your history into a file and call that file "history.txt"
 
-> Replace me with a bash code block answering the question
+```{bash}
+history > history.txt   
+```
 
 ### Question 16:  Please print the first 5 lines of your history by piping history into head
 
-> Replace me with a bash code block answering the question
+```{bash}
+history | head -5   
+```
 
 ### Question 17:  How would I specify to send me a reminder email every 8 minutes using a crontab?
 
-> Replace me with a crontab
+*/8**** echo "Reminder" | mailx -s "reminder" melas@med.usc.edu
 
 ### Question 18: What is the first line of a BASH script?
 
-> Replace me with a good answer
+#!/bin/bash
+
+
 
 
 
