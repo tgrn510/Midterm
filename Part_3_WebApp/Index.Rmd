@@ -1,0 +1,129 @@
+---
+title: "Part_3_Webapp"
+author: "Marilena Melas"
+date: "October 10, 2017"
+output: html_document
+runtime: shiny
+---
+title	author	date	output	runtime
+Bash
+Marilena Melas
+10/10/2017
+html_document
+shiny
+This is the third R Markdown for the midterm assignment. In this example, you will create a Shiny App using diamonds that you will initate by diamonds<-diamonds. It is worth 32 points if completed in full. The violin plot should let one choose their X-axis, Y-axis, Color-axis, Colorscale.
+
+Create this Violin Plot Designer
+
+http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization
+
+Snapshot of your final version
+
+This is just an image - don't let that confuse you.
+
+image: That was just an image. If you are confused then just click on this link that comes next.
+
+Example Fully Working Version
+
+What you will create - an example if you click me
+
+Please revise to diamonds
+
+I have provided a script that gets you started and insures you don't get hung up on some details while still understanding concepts. Please note that you need to use aes_string as I've done to convert the retuned variable to a string.
+
+For the color schemes, the more the better - but you could choose different at http://ggplot2.tidyverse.org/reference/scale_brewer.html
+
+The script below needs a lot of editing to get it to diamonds. If you think it looks like a pain to edit, the first version of this exam I didn't include it. Also, the coloring doesn't work - but all you have to do is go to one line on this page and just add it (6 points off if its published without the color working)
+
+```{r}
+library(shiny)
+library(ggplot2)
+library(RColorBrewer)
+diamonds<-diamonds
+summary(diamonds)
+iris<-iris
+summary(iris)
+```
+
+```{r}
+ui <- fluidPage(
+  fluidRow(
+    column(2,
+      radioButtons("colorscale", "colorscale:",
+               c("BrBG" = "BrBG",
+                 "Dark2" = "Dark2",
+                 "BuGn" = "BuGn")),        
+         radioButtons("xaxis", "X-axis:",
+               c("color" = "color",
+                 "clarity" = "clarity",
+                 "cut" = "cut")),
+                 
+            radioButtons("yaxis", "Y-axis:",
+               c("price" = "price",
+                 "depth" = "depth",
+                 "table" = "table")),
+                      
+         radioButtons("color", "Color-axis:",
+                 c("color" = "color",
+                   "clarity" = "clarity",
+                   "cut"="cut",
+                   "price" = "price",
+                   "depth" = "depth",
+                   "table" = "table"))
+    ),
+    column(10,
+      plotOutput("distPlot")
+    )
+  )
+)
+# Define server logic required to draw a histogram
+
+server <- function(input, output) {
+  output$distPlot <- renderPlot({
+      diamonds    <- diamonds
+      xaxis <- input$xaxis
+      yaxis <- input$yaxis
+      zaxis <- input$color
+      cbrewer <- input$colorscale
+      palette <- brewer.pal(8, cbrewer)
+      ggplot(diamonds, aes_string(x = xaxis, y = yaxis)) + geom_violin(aes_string(fill = zaxis)) + scale_fill_manual(values = palette)
+   })
+}
+# Run the application 
+
+```{r}
+shinyApp(ui = ui, server = server)
+cat("
+<style>
+h1 {
+    background-color: #990000;
+    color:#FFF;
+    text-align:center;
+}
+h2 {
+   background-color:#f3d6d6;
+   text-align:center;
+   color:#333
+}
+h3 {
+   margin-left:-5px;
+   color:#333
+}
+
+</style>
+")
+```
+
+
+© 2017 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About

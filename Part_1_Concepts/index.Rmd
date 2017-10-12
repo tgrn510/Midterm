@@ -1,7 +1,7 @@
 ---
 title: "Midterm Instructions: Concepts"
-author: "David W. Craig"
-date: "10/4/2017"
+author: "Marilena Melas"
+date: "10/10/2017"
 output: html_document
 runtime: shiny
 ---
@@ -29,29 +29,29 @@ See below for an example.  We see that both _true_ and _false_ are options.  To 
 
 ## Types of data (any language): 10 points
 
-* "2" is a __Null__ __String__ __Integer__ __Float__  __Boolean__ datatype.
-* 2 is a __Null__ __String__ __Integer__ __Float__ __Boolean__ datatype.
-* 2.05 is an __Null__ __String__ __Integer__ __Float__  __Boolean__ datatype.
-* 2.0 is an __Null__ __String__ __Integer__ __Float__  __Boolean__datatype.
-* "" is an __Null__ __String__ __Integer__ __Float__  __Boolean__ datatype.
-* "true" is an __Null__ __String__ __Integer__ __Fload__  __Boolean__ datatype.
-* TRUE is an __Null__ __String__ __Integer__ __Fload__  __Boolean__ datatype.
+* "2" is a  __String__ datatype.
+* 2 is a  __Integer__ datatype.
+* 2.05 is an  __Float__ datatype.
+* 2.0 is an  __Float__ datatype.
+* "" is an  __String__  datatype (empty String).
+* "true" is an  __String__ datatype.
+* TRUE is an  __Boolean__ datatype.
 
 ## Types of data (R): 10 points
 
-* When we run the command *a<-c("d",1,"b")* in *R*, creates a __dataframe__ __array__ __file__ __cat__ stored in *a*.
+* When we run the command *a<-c("d",1,"b")* in *R*, creates an __array__ stored in *a*.
 
-* After we create a variable *a* and fill it with data using the command a<-c("d",1,"b"), we can subset to *d<-a[2]*.  The type of data found in *d* is of type __string__ __integer__ __boolean__ __null__.
+* After we create a variable *a* and fill it with data using the command a<-c("d",1,"b"), we can subset to *d<-a[2]*.  The type of data found in *d* is of type __string__.
 
 If you were to load in the diamonds dataset from the ggplot2 library, what type of data is found within diamonds$carat?
 
->  __Your Answer Here__
+>  __Float__datatype
 
 ## Data (these are generalizable file formats, and not specific to R)
 
-* csv files are typically __comma__ __space__ __colon__ deliminited
+* csv files are typically __comma__ deliminited
 
-* The data below is typically __json__ __XML__ __tsv__?
+* The data below is typically __json__
 
 > data ={
         name: "John",
@@ -63,18 +63,18 @@ If you were to load in the diamonds dataset from the ggplot2 library, what type 
         age:14
     }
 
-* In the example above, data.age is  __Null__ __String__ __Integer__ __Boolean__ data-type
+* In the example above, data.age is   __Integer__ data-type
 
-* In the example above, data.address is an __ordered__ or __unordered__ embedded document (or list)
+* In the example above, data.address is an __ordered__ embedded document (or list)
 
 ## Licenses (10 Points)
 
-* It is __True__ __False__, If I publish my code working at my new company as MIT License, I can utilize that code
+* It is __True__ , If I publish my code working at my new company as MIT License, I can utilize that code
 at my next job as part of their projects provided I acknowledge the prior copyrights.
 
-* It is __True__ __False__, I can include code R that is GNU GPLv3 within my code  provided I cite the prior copyrights.
+* It is __True__ , I can include code R that is GNU GPLv3 within my code  provided I cite the prior copyrights.
 
-* It is __True__ __False__, I didn't put a license file in my code but I posted it on github while working in a research laboratory. Because of my lack of thoroughness, I can never use that code again should I take another job, and if I do I could be held liable.  
+* It is __False__, I didn't put a license file in my code but I posted it on github while working in a research laboratory. Because of my lack of thoroughness, I can never use that code again should I take another job, and if I do I could be held liable.  
 
 ***
 
