@@ -37,9 +37,8 @@ date
 
 ### Question 3:  Please make a new directory under the directory you are in called "mydirectory"
 
-```{bash}
 mkdir mydirectory
-```
+
 
 ### Question 4:  What are the last 5 commands you have in your history
 ```{bash}
@@ -73,10 +72,10 @@ cat numbers.txt
 
 ### Question 7:  How many characters and how many lines are in the file?
 
-```{bash}
+
 wc -c numbers.txt
 wc -l numbers.txt
-```
+
 
 ### Question 8: Please create a sed command (e.g. sed 's/match/replace/g' numbers.txt) to commify the list of numbers in thousands place to the screen.  For example: 1,234 or 12,121
 
